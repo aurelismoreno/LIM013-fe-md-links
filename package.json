@@ -1,0 +1,34 @@
+{
+  "name": "md-links-au",
+  "version": "1.0.0",
+  "description": "Verificando links de archivos Markdown",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aurelismoreno/LIM013-fe-md-links.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "links",
+    "markdown"
+  ],
+  "author": "Aurelis Moreno <aurelis.moreno@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aurelismoreno/LIM013-fe-md-links/issues"
+  },
+  "homepage": "https://github.com/aurelismoreno/LIM013-fe-md-links#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.4.2"
+  }
+}
