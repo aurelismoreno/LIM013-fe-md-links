@@ -2,7 +2,7 @@
   "name": "md-links-au",
   "version": "1.0.0",
   "description": "Verificando links de archivos Markdown",
-  "main": "index.js",
+  "main": "src/mdlink.js",
   "directories": {
     "test": "test"
   },
