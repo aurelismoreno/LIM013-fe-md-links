@@ -1,20 +1,15 @@
-/* const path = require("path"); */
+const path = require('path');
 
+//Funcion para validar si la ruta es absoluta en caso contrario convertir a absoluta
 
-const isMD = (checkPath) => {
-  let rpta = false;
-  if (path.parse(checkPath).ext === ".md") {
-    rpta = true;
+const typesPath = (route) => {
+  let pathAbsoluta;
+  if (!path.isAbsolute(route)) {
+    pathAbsoluta = path.resolve(route);
+  } else {
+    pathAbsoluta = route;
   }
-  return rpta;
+  return pathAbsoluta;
 };
 
-const isDir = (checkPath) => {
-  let rpta = false;
-  if (path.parse(checkPath).ext === "") {
-    rpta = true;
-  }
-  return rpta;
-};
-
-module.exports = { isMD, isDir };
+module.exports = { typesPath };
