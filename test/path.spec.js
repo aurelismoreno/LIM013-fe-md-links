@@ -47,3 +47,15 @@ describe('Debería evaluar si el path es un archivo ', () => {
   });
 });
 
+//-----Test para probar la funcion 'isdirectory'--------------
+describe('Debería evaluar si el path es un directorio', () => {
+  it('Es una funcion', () => {
+    expect(typeof testPath.isdirectory).toBe('function');
+  });
+  it('Devuelve true si es directorio', () => {
+    expect(testPath.isdirectory(pathDirectory)).toEqual(true);
+  });
+  it('Devuelve false si no es directorio ', () => {
+    expect(testPath.isdirectory('README.md')).toEqual(false);
+  });
+});

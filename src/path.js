@@ -22,5 +22,12 @@ const isFile = (route) => {
   let result = pathFile.isFile();
   return result;
 };
-
-module.exports = { pathExists, typesPath, isFile };
+//Funcion para validar si el path, es un  directorio
+const isdirectory = (route) => {
+  let pathDir = false;
+  if (path.parse(route).ext === '') {
+    pathDir = true;
+  }
+  return pathDir;
+};
+module.exports = { pathExists, typesPath, isFile, isdirectory };
