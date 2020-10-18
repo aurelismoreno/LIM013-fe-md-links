@@ -2,11 +2,10 @@ const path = require('path'); //Modulo path que permite interactuar con rutas de
 const fs = require('fs'); // Modulo para interactuar con el sistema de archivos.
 
 //Funcion para validar path, devuelve boolean si ruta es valida
-const noPath = ['.', '..'];
-const pathExists = (route) =>
-  noPath.includes(route) ? false : fs.existsSync(route);
 
-//Funcion para validar si la ruta es absoluta en caso contrario convertir a absoluta
+const pathExists = (route) => fs.existsSync(route);
+
+//Funcion para validar si el path es absoluta en caso contrario convertir a absoluta
 
 const typesPath = (route) => {
   let pathAbsoluta;
@@ -17,5 +16,11 @@ const typesPath = (route) => {
   }
   return pathAbsoluta;
 };
+//Funcion para validar si el path, es un archivo
+const isFile = (route) => {
+  let pathFile = fs.statSync(route);
+  let result = pathFile.isFile();
+  return result;
+};
 
-module.exports = { typesPath, pathExists };
+module.exports = { pathExists, typesPath, isFile };
