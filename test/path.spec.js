@@ -4,7 +4,6 @@ const { pathExists } = require('../src/path.js'); // Destructuracion del objeto
 //-----Test para probar la funcion isValidPath-----------------
 describe('Deberia validar si el path (ruta) existe', () => {
   it('Debería ser una función', () => {
-    console.log(testPath.pathExists);
     expect(typeof pathExists).toBe('function');
   });
   it('Debería retornar true si es la ruta es válida', () => {
@@ -57,5 +56,17 @@ describe('Debería evaluar si el path es un directorio', () => {
   });
   it('Devuelve false si no es directorio ', () => {
     expect(testPath.isdirectory('README.md')).toEqual(false);
+  });
+});
+//-----Test para probar la funcion 'isMd'--------------
+describe('Debería evaluar si el path es un archivo Markdown', () => {
+  it('Es una funcion', () => {
+    expect(typeof testPath.isMd).toBe('function');
+  });
+  it('Devuelve true si es archivo MD', () => {
+    expect(testPath.isMd('README.md')).toEqual(true);
+  });
+  it('Devuelve false si no es archivo MD', () => {
+    expect(testPath.isMd('REDAME.txt')).toEqual(false);
   });
 });

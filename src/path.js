@@ -30,4 +30,12 @@ const isdirectory = (route) => {
   }
   return pathDir;
 };
-module.exports = { pathExists, typesPath, isFile, isdirectory };
+//Funcion para validar si es archivo Markdown
+const isMd = (route) => {
+  let pathMd = false;
+  if (path.parse(route).ext === '.md') {
+    pathMd = true;
+  }
+  return pathMd;
+};
+module.exports = { pathExists, typesPath, isFile, isdirectory, isMd };
