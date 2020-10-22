@@ -1,7 +1,9 @@
-const testPath = require('../src/path.js');
-const { pathExists } = require('../src/path.js'); // Destructuracion del objeto
+/* eslint-disable no-undef */
+const testPath = require('../src/pathCheck.js');
+const { pathExists } = require('../src/pathCheck.js'); // Destructuracion del objeto
 
-//-----Test para probar la funcion isValidPath-----------------
+// -----Test para probar la funcion isValidPath-----------------
+// eslint-disable-next-line no-undef
 describe('Deberia validar si el path (ruta) existe', () => {
   it('Debería ser una función', () => {
     expect(typeof pathExists).toBe('function');
@@ -13,14 +15,11 @@ describe('Deberia validar si el path (ruta) existe', () => {
     expect(testPath.pathExists('C:\\Users\\C:\\projects')).toBe(false);
   });
 });
-//-----Test para probar la funcion 'typesPath'--------------
+// -----Test para probar la funcion 'typesPath'--------------
 const pathRelativo = '.\\README.md';
-const pathAbsoluto =
-  'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
-const Result =
-  'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
-const pathDirectory =
-  'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-linkssrc';
+const pathAbsoluto = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
+const Result = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
+const pathDirectory = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-linkssrc';
 
 describe('Debería evaluar si el path es absoluto en caso contrario convertirlo a absoluto', () => {
   it('Debería ser una función', () => {
@@ -33,7 +32,7 @@ describe('Debería evaluar si el path es absoluto en caso contrario convertirlo 
     expect(testPath.typesPath('README.md')).toEqual(Result);
   });
 });
-//-----Test para probar la funcion 'isFile'--------------
+// -----Test para probar la funcion 'isFile'--------------
 describe('Debería evaluar si el path es un archivo ', () => {
   it('Debería ser una funcion', () => {
     expect(typeof testPath.isFile).toEqual('function');
@@ -46,7 +45,7 @@ describe('Debería evaluar si el path es un archivo ', () => {
   });
 });
 
-//-----Test para probar la funcion 'isdirectory'--------------
+// -----Test para probar la funcion 'isdirectory'--------------
 describe('Debería evaluar si el path es un directorio', () => {
   it('Es una funcion', () => {
     expect(typeof testPath.isdirectory).toBe('function');
@@ -58,7 +57,7 @@ describe('Debería evaluar si el path es un directorio', () => {
     expect(testPath.isdirectory('README.md')).toEqual(false);
   });
 });
-//-----Test para probar la funcion 'isMd'--------------
+// -----Test para probar la funcion 'isMd'--------------
 describe('Debería evaluar si el path es un archivo Markdown', () => {
   it('Es una funcion', () => {
     expect(typeof testPath.isMd).toBe('function');
