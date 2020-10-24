@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const path = require('path'); // Modulo path que permite interactuar con rutas de archivos y directorios
 const fs = require('fs'); // Modulo para interactuar con el sistema de archivos.
 
@@ -23,7 +24,7 @@ const isFile = (route) => {
   return result;
 };
 // Funcion para validar si el path, es un  directorio
-const isdirectory = (route) => {
+const isDir = (route) => {
   let pathDir = false;
   if (path.parse(route).ext === '') {
     pathDir = true;
@@ -38,7 +39,11 @@ const isMd = (route) => {
   }
   return pathMd;
 };
-
+// console.log(typesPath('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\src'));
 module.exports = {
-  pathExists, typesPath, isFile, isdirectory, isMd,
+  pathExists,
+  typesPath,
+  isFile,
+  isDir,
+  isMd,
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fs = require('fs');
 const marked = require('marked');
 const pathCheck = require('./pathCheck.js');
@@ -22,7 +23,7 @@ const findLinks = (fileMd) => {
 
   return arrLinks;
 };
-
+// console.log(findLinks('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md'));
 // Recorre directorio y devuelve los archivos Md encontrados con custom renderer de marked.
 module.exports = {
   findLinks,
