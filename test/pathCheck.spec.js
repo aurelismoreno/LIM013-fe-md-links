@@ -47,7 +47,7 @@ describe('Debería evaluar si el path es un archivo ', () => {
 
 // -----Test para probar la funcion 'isdirectory'--------------
 describe('Debería evaluar si el path es un directorio', () => {
-  it('Es una funcion', () => {
+  it('Debería ser una función', () => {
     expect(typeof testPath.isDir).toBe('function');
   });
   it('Devuelve true si es directorio', () => {
@@ -59,7 +59,7 @@ describe('Debería evaluar si el path es un directorio', () => {
 });
 // -----Test para probar la funcion 'isMd'--------------
 describe('Debería evaluar si el path es un archivo Markdown', () => {
-  it('Es una funcion', () => {
+  it('Debería ser una función', () => {
     expect(typeof testPath.isMd).toBe('function');
   });
   it('Devuelve true si es archivo MD', () => {

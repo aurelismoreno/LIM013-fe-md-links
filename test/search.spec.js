@@ -393,9 +393,9 @@ const result = [
       'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md',
   },
 ];
-
+// -----Test para probar la funcion 'findLinks'--------------
 describe('Deberia extraer los links encontrados en archivo Markdown', () => {
-  it('Es una funcion', () => {
+  it('Debería ser una función', () => {
     expect(typeof search.findLinks).toBe('function');
   });
   it('Devuelve links de archivo MD', () => {
@@ -404,4 +404,17 @@ describe('Deberia extraer los links encontrados en archivo Markdown', () => {
   it('Devuelve [] si no encuentra links', () => {
     expect(search.findLinks('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\src\\APUNTES.md')).toEqual([]);
   });
+});
+
+// -----Test para probar la funcion 'findMd'--------------
+describe('Deberia extraer los Markdown encontrados en un directorio ', () => {
+  it('Debería ser una función', () => {
+    expect(typeof search.findMd).toBe('function');
+  });
+  it('Devuelve links de fileMD encontrados en directorios', () =>{
+    expect(search.findMd('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\src\\APUNTES.md')).toEqual('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\src');
+  });
+  // it('Devuelve [] si no encuentra links', () => {
+  //   expect(search.findMy(getPath("test\\directory-test\\hola.md"))).toEqual([getPath("test\\directory-test\\hola.md")]);
+  // });
 });
