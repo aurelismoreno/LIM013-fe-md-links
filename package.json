@@ -2,9 +2,14 @@
   "name": "md-links-au",
   "version": "1.0.0",
   "description": "Verificando links de archivos Markdown",
-  "main": "src/mdlink.js",
+  "main": "src/md-link.js",
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "eslint": "eslint --ext .js src/ testing/ ",
+    "eco": "echo test"
+  },
+  "bin": {
+    "md-link": "src/cli.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +34,10 @@
     "jest": "^26.4.2"
   },
   "dependencies": {
-    "marked": "^1.2.2"
+    "core-js": "^3.6.5",
+    "fetch-mock": "^9.0.0-beta.2",
+    "marked": "^1.2.2",
+    "node-emoji": "^1.10.0",
+    "node-fetch": "^2.6.1"
   }
 }

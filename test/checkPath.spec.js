@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-const testPath = require('../src/pathCheck.js');
-const { pathExists } = require('../src/pathCheck.js'); // Destructuracion del objeto
+const testPath = require('../src/checkPath.js');
+const { pathExists } = require('../src/checkPath.js'); // Destructuracion del objeto
 
 // -----Test para probar la funcion isValidPath-----------------
-// eslint-disable-next-line no-undef
+/* eslint-disable-next-line no-undef */
 describe('Deberia validar si el path (ruta) existe', () => {
   it('Debería ser una función', () => {
     expect(typeof pathExists).toBe('function');
@@ -23,13 +23,13 @@ const pathDirectory = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-link
 
 describe('Debería evaluar si el path es absoluto en caso contrario convertirlo a absoluto', () => {
   it('Debería ser una función', () => {
-    expect(typeof testPath.typesPath).toBe('function');
+    expect(typeof testPath.convertPath).toBe('function');
   });
   it('Debería retornar la ruta absoluta', () => {
-    expect(testPath.typesPath(pathRelativo)).toBe(pathAbsoluto);
+    expect(testPath.convertPath(pathRelativo)).toBe(pathAbsoluto);
   });
   it('Debería retornar la ruta absoluta de README.md', () => {
-    expect(testPath.typesPath('README.md')).toEqual(Result);
+    expect(testPath.convertPath('README.md')).toEqual(Result);
   });
 });
 // -----Test para probar la funcion 'isFile'--------------
