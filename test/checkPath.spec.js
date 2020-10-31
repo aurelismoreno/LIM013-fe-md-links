@@ -20,6 +20,7 @@ const pathRelativo = '.\\README.md';
 const pathAbsoluto = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
 const Result = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md';
 const pathDirectory = 'C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-linkssrc';
+const cwd = process.cwd();
 
 describe('Debería evaluar si el path es absoluto en caso contrario convertirlo a absoluto', () => {
   it('Debería ser una función', () => {
@@ -41,7 +42,7 @@ describe('Debería evaluar si el path es un archivo ', () => {
     expect(testPath.isFile('./README.md')).toBe(true);
   });
   it('Debería recibir un string y retornar un booleano', () => {
-    expect(testPath.isFile(process.cwd())).toBe(false);
+    expect(testPath.isFile(cwd)).toBe(false);
   });
 });
 
