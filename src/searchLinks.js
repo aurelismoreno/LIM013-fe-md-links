@@ -3,7 +3,7 @@ const fs = require('fs');
 const marked = require('marked');
 const checkPath = require('./checkPath.js');
 
-// Recorre archivo MD y devuelve links encontrados con custom renderer de marked.
+// ----- Recorre archivo MD y devuelve links encontrados con custom renderer de marked.
 const findLinks = (fileMd) => {
   const arrLinks = [];
   const mdAbsolute = checkPath.convertPath(fileMd);
@@ -25,7 +25,7 @@ const findLinks = (fileMd) => {
   return arrLinks;
 };
 
-// console.log(findLinks('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md'));
+console.log(findLinks('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\README.md'));
 
 module.exports = {
   findLinks,

@@ -34,6 +34,7 @@
     "jest": "^26.4.2"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "core-js": "^3.6.5",
     "fetch-mock": "^9.0.0-beta.2",
     "marked": "^1.2.2",

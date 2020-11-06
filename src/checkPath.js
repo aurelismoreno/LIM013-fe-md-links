@@ -52,7 +52,8 @@ const isMd = (route) => {
   }
   return pathMd;
 };
-// console.log(typesPath('C:\\Users\\aurel\\Documents\\Proyectos\\LIM013-fe-md-links\\src'));
+console.log(convertPath('README.md'));
+
 module.exports = {
   pathExists,
   convertPath,
